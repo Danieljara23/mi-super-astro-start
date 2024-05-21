@@ -1,0 +1,39 @@
+---
+  const headerElements = [
+    {
+      label: "Home",
+      url: "/"
+    },
+    {
+      label: "About",
+      url: "/about"
+    },
+    {
+      label: "Blog",
+      url: "/blog"
+    },
+    {
+      label: "News",
+      url: "/news"
+    },
+
+  ]
+---
+
+<header>
+  <nav>
+    <ul>
+      {headerElements.map(element => <li><a href={element.url}>{element.label}</a></li>)}
+    </ul>
+  </nav>
+</header>
+<style>
+ul {
+  list-style: none;
+  display: flex;
+  gap: 10px;
+}
+li a {
+  /* color: white; */
+}
+</style>
